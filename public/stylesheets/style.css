@@ -1,8 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #000;
   color: #fff;
+  margin: 0 auto;
 }
 
 a {
@@ -14,17 +20,13 @@ a {
   border-radius: 10px;
   padding: 10px;
   overflow: scroll;
-  max-height: 400px;
+  max-height: 600px;
 }
 
 .user-message-box {
    border-bottom: 1px solid #555;
 }
 
-.user {
-  font-size: 1.5em;
-  font-weight: bold;
-}
 
 .user-message {
    color: #555;
@@ -35,13 +37,23 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  min-height: 400px;
+  width: 100%; 
+  align-items: center;
 }
 
-.form>div {
+
+
+.form div {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  max-width:100%;
+
+}
+
+label{
+  margin-bottom: 10px;
 }
 
 form>div>input{
@@ -70,6 +82,7 @@ form>div>input{
 textarea{
   resize: none;
   min-height: 70px;
+  
   border-radius: 5px;
   padding: 1em;
 }
@@ -86,3 +99,4 @@ textarea{
   background: blue;
   color: #fff;
 }
+
