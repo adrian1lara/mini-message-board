@@ -7,14 +7,18 @@
   <body>
 
     <head>
-      <a href="/new">Create your message</a>
+      <a href="/new" class='link'>Create your message</a>
     </head>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <h2>Messages</h2>
-    <% messages.forEach(function (message) { %>
-    <p><%= message.user %></p>
-    <p><%= message.text %></p> <span><%= message.added %></span>
-    <% }); %>
+    <div class='message-box'>
+      <% messages.forEach(function (message) { %>
+        <div class='user-message-box'>
+          <p class='user'><%= message.user %></p>
+          <p class='user-message'><%= message.message %></p> <span><%= message.added %></span>
+        </div>
+      <% }); %>
+    </div>
   </body>
 </html>
