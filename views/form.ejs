@@ -1,11 +1,22 @@
-<form method="POST" action="/new">
-  <label>Your name:</label>
-  <br>
-  <input type="text" name="txtAuthor" required/>
-  <br>
-  <label>Say something:</label>
-  <br>
-  <input type="text" name="txtMessage" required/>
-  <br>
-  <input type="submit" value="Send Message" />
-</form> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Message</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form method="POST" action="/new" class='form'>
+      <div>
+      <label>Your name:</label>
+      <input type="text" name="txtAuthor" required placeholder='user123' minLength='3' maxLength='15' />
+      </div>
+      <div>
+      <label>Say something:</label>
+      <textarea type="text" name="txtMessage" required placeholder='hello world' maxLength='100'/></textarea>
+      </div>
+      <input type="submit" value="Send Message" class='button'/>
+    </form> 
+    <a href='/'>No sorry!</a>
+  </body>
+</html>
+
