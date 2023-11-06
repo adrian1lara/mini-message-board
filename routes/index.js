@@ -30,19 +30,6 @@ const MessageCollection = moongose.model('Message', MessageSchema)
 
 // default message
 
-const messages = [
-  {
-    text: "Hello World",
-    user: "Amando",
-    added: new Date()
-  },
-  {
-    text: "Hello man",
-    user: "Charles",
-    added: new Date()
-  }
-]
-
 /* GET home page. */
 router.get('/', async function(req, res, next) {
 
@@ -76,7 +63,7 @@ router.post('/new', async (req, res) => {
 
   try {
     const messageSave = await messageDetail.save()
-    if (messageDetail) {
+    if (messageSave) {
       res.redirect('/')
     } else {
 
